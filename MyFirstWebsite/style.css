@@ -53,8 +53,8 @@ h1 {
   padding: 10pt;
   margin: 10pt;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: left;
 }
 
 .content{
