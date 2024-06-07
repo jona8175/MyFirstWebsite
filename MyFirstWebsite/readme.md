@@ -1,5 +1,5 @@
 TerminalComands:
-cd /foldername
+cd ./foldername
 ls list folder contents
 
 
