@@ -13,8 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 body {
   margin: 0;
   display: flex;
@@ -24,18 +22,135 @@ body {
   min-height: 100vh;
 }
 
+/* menu bar */
+nav {
+  width: 100%;
+  height: 65px;
+  padding: 0;
+  background-color: #273457;
+  color: #fff;
+}
+/* (menu) */
+ul{
+}
+
+/* text box (menu) */
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style:  none;      /*  */
+  float: left;            /* no caps */
+  display: inline-block;  /* next to each other */
+  display: block;         /* so the text is in a all clickable block */
+}
+
+/* text (menu) */
+ul li a {
+  text-decoration: none; /* links do not have underlines anymore */
+  font-size: 20px;
+  color:aliceblue;
+  padding: 20px;
+}
+
+/* checkbox for burger menu */
+.checkbtn{
+  text-decoration: none; /* links do not have underlines anymore */
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  color:rgb(133, 3, 3);
+}
+
+.burgerMenuText{
+  text-decoration: none; /* links do not have underlines anymore */
+  font-size: 20px;
+  font-style: normal;
+  color:rgb(255, 255, 255);
+  padding: 20px;
+}
+
+#check{
+  display: none;
+}
+#check:checked ~ .nav-mobile{display: block ;}
+
+#check2{
+  display: none;
+}
+#check2:checked ~ .nav-mobileUp{display: block;}
+
+/* Burger menu*/
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 65px;
+  margin-left: 170px;
+  overflow: hidden;
+  background: #95aac8;
+  z-index: 1;
+  width: 200px;
+}
+
+.nav-mobileUp{
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  margin-left: 170px;
+  overflow: hidden;
+  background: #95aac8;
+  z-index: 1;
+  width: 200px;
+}
+.nav-mobileUp a {
+  text-decoration: none;
+  color: #fdfdfd;
+  padding: 1rem 1.5rem;
+  display: block;
+}
+
+/* text in burger menu*/
+.nav-mobile a {
+  text-decoration: none;
+  color: #fdfdfd;
+  padding: 1rem 1.5rem;
+  display: block;
+}
+
+/* styls for text pages */
+
+.sheet {
+  background-color: rgb(230, 236, 236);
+  padding-right: 70pt;
+  padding-left: 50pt;
+  padding-bottom: 100pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar{
+  background-color: rgb(255, 255, 255);
+  padding-right: 15pt;
+  padding-left: 15pt;
+  
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color: rgb(68, 73, 107);
 }
 
-
 .box{
   border-radius: 10pt;
   background-color: rgb(154, 160, 160);
-  padding: 10pt;
-  margin: 10pt;
+  padding: 0pt;
+  margin: 0pt;
   display: flex;
   flex-direction: column;
   
@@ -49,6 +164,7 @@ h1 {
   display: flex;
   flex-direction: row;
 }
+
 .imageBox{
   border-radius: 10pt;
   background-color: rgb(113, 118, 118);
@@ -66,7 +182,6 @@ h1 {
   min-width: 70pt;
 }
 
-
 .main{
   display: flex;
   flex-direction: row;
@@ -80,15 +195,115 @@ h1 {
   overflow-y: scroll;
   height: 100vh;
   width: 50%;
+  resize: horizontal;
 }
 
 .rightPanel{
   width: 50%;
 }
-iframe{
-  height: 100vh;
-  width: 100%;
-  border: none;
-  
+.modelmenu{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  width: 50%;
+  background-color: rgb(75, 83, 107);
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
 
+iframe{
+  height: 90vh;
+  width: 100%;
+  border: none; 
+}
+
+/* div tag for menu */
+.menu {
+  width: 100%;
+  height: 65px;
+  background-color: rgb(11, 63, 73);
+}
+
+.profile_button{
+  border-radius: 10pt;
+  width: 50px;
+  height: 20px;
+  background-color: rgb(152, 37, 22);
+  border: none; /* Remove borders */
+  padding: 10px 10px; /* Some padding */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+.profile_button:hover{
+  background-color: rgb(64, 10, 3);
+}
+
+.button5 {
+  border-radius: 5pt;
+  background-color: #3e506d; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 85%;
+  height: 85%;
+  
+}
+
+
+
+/* next 3 brakets styl the Menu 
+ul li: the text boxes
+ul li a: text */
+
+ul{
+}
+/* text box (menu) */
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style:  none;      /*  */
+  float: left;            /* no caps */
+  display: inline-block;  /* next to each other */
+  display: block;         /* so the text is in a all clickable block */
+}
+/* text (menu) */
+ul li a {
+  text-decoration: none; /* links do not have underlines anymore */
+  font-size: 20px;
+  color:aliceblue;
+  padding: 20px;
+
+}
+
+.modelmenubutton{
+  text-decoration: none; /* links do not have underlines anymore */
+  font-size: 20px;
+  color:aliceblue;
+  padding: 20px;
+  margin: 0;
+  padding: 0;
+  list-style:  none;      /*  */
+  float: left;            /* no caps */
+  display: inline-block;  /* next to each other */
+  display: block; 
 }

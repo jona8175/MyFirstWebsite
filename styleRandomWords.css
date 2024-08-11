@@ -1,0 +1,158 @@
+:root {
+  --background-color: rgb(129, 155, 157);
+  --dark-background-color: rgb(36, 52, 54);
+  --accent-color: rgb(98, 175, 182);
+  --text-color: rgb(226, 232, 232);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(0, 0, 0, 0.936);
+  background-color: #ffffffe3;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  margin:0;
+  padding: 0;
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+html{
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+nav{
+  height: 80px;
+  background: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul{
+  height:100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li{
+  height: 100%;
+  width: 150px;
+  text-align: center;
+  list-style: none;
+  position: relative;
+}
+
+nav li:hover{
+  background: var(--accent-color);
+}
+
+nav input[type="checkbox"]{
+  display: none;
+}
+
+.expandable_li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+nav ul a{
+  height:100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+
+.dropdown{
+  height: min-content;
+  width: 200px;
+  background-color: var(--dark-background-color);
+
+  display: none;
+  flex-direction: column;
+
+  position:absolute;
+  left: 0;
+  top: 80px;
+}
+.dropdown li{
+  height: 70px;
+  width: 100%;
+}
+.dropdown li a{
+  justify-content: flex-start;
+  padding-left: 30px;
+  width: calc(100%-30px);
+}
+nav li:hover .dropdown{
+  display: flex;
+}
+
+
+.verb_element{
+  padding: 50px,50px,50px,50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: rgb(68, 73, 107);
+}
+
+.Button{
+  border-radius: 5pt;
+  background-color: #3e506d; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.Button:hover{
+  border-radius: 5pt;
+  background-color: #5b7fba; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}

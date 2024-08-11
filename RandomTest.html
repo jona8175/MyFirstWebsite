@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>random words</title>
+  <link rel="stylesheet" type="text/css" href="styleRandomWords.css" />
+  
+</head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li class= "expandable_li" >
+            <input type="checkbox" id="Burger">
+            <label for="Burger">Burger</label>
+            <ul class="dropdown">
+              <li><a href="#">some cont</a></li>
+              <li><a href="#">and more</a></li>
+              <li><a href="#">and cont</a></li>
+            </ul> 
+          </li>
+          <li><a href="#"> more</a></li>
+          <li><a href="#"> even more</a></li>
+        </ul>
+      </nav>
+
+      <div class="verb_element">
+
+        <p id="demo"> Hier ein Verb.</p>
+
+        <button id=GF type="VerbButton" class = Button onclick="showSolutionGF()"> Here </button>
+        <button id=1p1z type="VerbButton" class = Button onclick="showSolution1()"> io </button>
+        <button id=2p1z type="VerbButton" class = Button onclick="showSolution2()"> to </button>
+        <button id=3p1z type="VerbButton" class = Button onclick="showSolution3()"> lui/lei </button>
+        <button id=1pmz type="VerbButton" class = Button onclick="showSolution4()"> noi </button>
+        <button id=2pmz type="VerbButton" class = Button onclick="showSolution5()"> voi </button>
+        <button id=3pmz type="VerbButton" class = Button onclick="showSolution6()"> loro </button>
+      
+        <button onclick="myFunction()">Refresh</button>
+      </div>
+    
+        <script>
+          var x
+
+          const verben = [
+              "avere","ho", "hai", "ha","abbiamo","avete","hanno",
+              "essere","sono","sei","e","siamo","siete","sono",
+              "fare", "faccio","fai","fa","facciamo","fate","fanno",
+              "dire", "dico","dici","dice","diciamo","dite","dicono",
+              "potere","posso","puoi","può","possiamo","potete","possono",
+              "volere","voglio","vuoi","vuole","vogliamo","volete","vogliono",
+              "sapere","sto","stai","sta","stiamo","state","stanno",
+              "dovere","devo","devi","deve","dobbiamo","dovete","devono",
+              "vedere","vedo","vedi","vede","vediamo","vedete","vedono",
+              "andare","vado","vai","va","andiamo","andate","vanno",
+              "venire","vengo","vieni","viene","veniamo","venite","vengono",
+              "dare","do","dai","dà","diamo","date","danno",
+              "parlare","parlo","parli","parla","parliamo","parlate","parlano",
+              "trovare","trovo","trovi","trova","troviamo","trovate","trovano",
+              "sentire","sento","senti","sente","sentiamo","sentite","sentono",
+              "lasciare","lascio","lasci","lascia","lasciamo","lasciate","lasciano",
+              "prendere","prendo","prendi","prende","prendiamo","prendete","prendono",
+              "guardare","guardo","guardi","guarda","guardiamo","guardate","guardano",
+              "mettere","metto","metti","mette","mettiamo","mettete","mettono",
+              "andare","vado","vai","va","andiamo","andate","vanno",
+              "mangiare","mangio","mangi","mangia","mangiamo","mangiate","mangiano",
+              "bere","bevo","bevi","beve","beviamo","bevete","beveno",
+              "dormire","dormo","dormi","dorme","dormiamo","dormite","dormono",
+              "abitare","abito","abiti","abita","abitiamo","abiate","abitano",
+              "vivere","vivo","vivi","vive","viviamo","vivete","vivono",
+              "lavorare","lavoro","lavori","lavora","lavoriamo","lavorate","lavorano",
+              "leggere","leggo","leggi","legge","leggiamo","leggete","leggono",
+              "scrivere","scrivo","scrivi","scrive","scriviamo","scrivete","scrivono",
+              "portare","porto","porti","porta","portiamo","portate","portono",
+              "incontrare","incontro","incontri","incontra","incontriamo","incontrate","incontrano"
+          ];
+          const verbendeutsch = [
+            "haben","sein","machen, tun","sagen","können, dürfen",
+            "wollen, möchten","wissen","müssen, sollen","sehen",
+            "gehen","kommen","geben","sprechen","finden",
+            "hören, fühlen","lassen","nehmen","anschauen","stellen, legen, setzen",
+            "gehen, fahren","essen","trinken","schlafen","wohnen",
+            "leben","arbeiten","lesen","schreiben","bringen",
+            "treffen"
+          ];
+
+          const personen = [
+            "Grund Form","io","tu","lui/lei","noi","voi","loro"
+          ];
+
+          function showSolutionGF() {
+            var buttonGF = document.getElementById("GF");
+            buttonGF.innerHTML = verben[x];
+          }
+          function showSolution1() {
+            var button1 = document.getElementById("1p1z");
+            button1.innerHTML = verben[x + 1];
+          }
+          function showSolution2() {
+            var button1 = document.getElementById("2p1z");
+            button1.innerHTML = verben[x + 2];
+          }
+          function showSolution3() {
+            var button1 = document.getElementById("3p1z");
+            button1.innerHTML = verben[x + 3];
+          }
+          function showSolution4() {
+            var button1 = document.getElementById("1pmz");
+            button1.innerHTML = verben[x + 4];
+          }
+          function showSolution5() {
+            var button1 = document.getElementById("2pmz");
+            button1.innerHTML = verben[x + 5];
+          }
+          function showSolution6() {
+            var button1 = document.getElementById("3pmz");
+            button1.innerHTML = verben[x + 6];
+          }
+
+
+
+          function myFunction() {
+            x = Math.floor(Math.random()*29);
+            x = x * 7;
+            
+            var buttonGF = document.getElementById("GF"); //gets the button element
+            var button1 = document.getElementById("1p1z"); //gets the button element
+            var button2 = document.getElementById("2p1z"); //gets the button element
+            var button3 = document.getElementById("3p1z"); //gets the button element
+            var button4 = document.getElementById("1pmz"); //gets the button element
+            var button5 = document.getElementById("2pmz"); //gets the button element
+            var button6 = document.getElementById("3pmz"); //gets the button element
+
+            buttonGF.innerHTML = verbendeutsch[x/7]; //changes the value to what the text input is
+            button1.innerHTML = personen[1]; //changes the value to what the text input is
+            button2.innerHTML = personen[2]; //changes the value to what the text input is
+            button3.innerHTML = personen[3]; //changes the value to what the text input is
+            button4.innerHTML = personen[4]; //changes the value to what the text input is
+            button5.innerHTML = personen[5]; //changes the value to what the text input is
+            button6.innerHTML = personen[6]; //changes the value to what the text input is
+            }   
+          
+        </script>
+    </body>
+</html>
